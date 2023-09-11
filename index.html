@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SheCodes</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://kit.fontawesome.com/02c9f4b308.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <link rel="stylesheet" href="src/styles.css" />
+  <body>
+    <div class="container">
+      <div class="weather-app">
+        <div class="row header">
+          <div class="col-6">
+            <h1 id="city">Sydney</h1>
+            <h2 id="dateTime">Monday, 21 August 2023 | 01 : 45 PM</h2>
+          </div>
+          <div class="col-5">
+            <form class="search-form" id="search-form">
+              <div class="row">
+                <div class="col-10">
+                  <input
+                    type="search"
+                    class="form-control"
+                    placeholder="Type a city or location"
+                    id="city-input"
+                    autocomplete="off"
+                  />
+                </div>
+                <div class="col-2">
+                  <input
+                    type="submit"
+                    class="btn btn-outline-primary search-button"
+                    value="Search"
+                    id="search-button"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="col-1">
+            <button id="current-location-button">
+              <img src="icons/map.svg" alt="location-icon" id="location-icon" />
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-7 current-weather">
+            <div class="clearfix">
+              <img
+                src="icons/cloudy01.svg"
+                alt="Cloudly icon"
+                class="weather-icon"
+              />
+              <span class="temperature" id="temperature">19</span
+              ><span class="units">
+                <a href="#" id="celsius-link">°C</a> |
+                <a href="#" id="fahrenheit-link">°F</a>
+              </span>
+              <span id="weather-description">Parly cloudy</span>
+            </div>
+          </div>
+          <div class="col-3">
+            <ul id="weather-info">
+              <li>
+                <img
+                  src="icons/cloud-drizzle.svg"
+                  alt="feels-like-icon"
+                  class="icon"
+                />
+                <span id="Precipitation">Precipitation: 0%</span>
+              </li>
+              <li>
+                <img
+                  src="icons/humidity.svg"
+                  alt="humidity-icon"
+                  class="icon"
+                />
+                Humidity: <span id="humidity">77</span>%
+              </li>
+              <li>
+                <img src="icons/wind.svg" alt="wind-icon" class="icon" /> Wind:
+                <span id="windSpeed">8</span>km/h
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="container text-center">
+          <div class="weather-forecast" id="forecast">
+            <div class="row">
+              <div class="col weekdays">
+                <h3>Monday</h3>
+                <img
+                  src="icons/wind01.svg"
+                  alt="windy icon"
+                  class="weekday-weather"
+                />
+                <p class="forecast-temp">
+                  <span class="forecast-temp-max">20°</span> -
+                  <span class="forecast-temp-min"></span>5°
+                </p>
+                <p class="weather-type">windy</p>
+              </div>
+              <div class="col weekdays">
+                <h3>Tuesday</h3>
+                <img
+                  src="icons/sun01.svg"
+                  alt="sunny icon"
+                  class="weekday-weather"
+                />
+                <p class="forecast-temp">
+                  <span class="forecast-temp-max">20°</span>-
+                  <span class="forecast-temp-min"></span>5°
+                </p>
+                <p class="weather-type">sunny</p>
+              </div>
+              <div class="col weekdays">
+                <h3>Wednesday</h3>
+                <img
+                  src="icons/snow01.svg"
+                  alt="snow icon"
+                  class="weekday-weather"
+                />
+                <p class="forecast-temp">
+                  <span class="forecast-temp-max">20°</span>-
+                  <span class="forecast-temp-min"></span>5°
+                </p>
+                <p class="weather-type">snow</p>
+              </div>
+              <div class="col weekdays">
+                <h3>Thursday</h3>
+                <img
+                  src="icons/thurder01.svg"
+                  alt="thunder icon"
+                  class="weekday-weather"
+                />
+                <p class="forecast-temp">
+                  <span class="forecast-temp-max">20°</span>-
+                  <span class="forecast-temp-min"></span>5°
+                </p>
+                <p class="weather-type">thunder</p>
+              </div>
+              <div class="col weekdays">
+                <h3>Friday</h3>
+                <img
+                  src="icons/rain02.svg"
+                  alt="rainy icon"
+                  class="weekday-weather"
+                />
+                <p class="forecast-temp">
+                  <span class="forecast-temp-max">20°</span>-
+                  <span class="forecast-temp-min"></span>5°
+                </p>
+                <p class="weather-type">raining</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
