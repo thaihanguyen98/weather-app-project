@@ -71,7 +71,7 @@ h2 {
   border: 0;
   border-radius: 10px;
 }
-#location-button:hover {
+#current-location-button:hover {
   background-color: #3b7cbe;
 }
 .form-control {
@@ -172,4 +172,18 @@ img.weekday-weather {
   max-width: 100%;
   border-radius: 20px;
   max-height: 220px;
+}
+
+footer {
+  font-size: 12px;
+  font-weight: 400;
+  color: #59657e;
+  align-items: center;
+  padding-top: 8px;
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+}
+footer > a {
+  color: rgb(26, 130, 234);
 }
