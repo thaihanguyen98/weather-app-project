@@ -24,6 +24,7 @@ function formatDate(timestamp) {
 function showWeather(response) {
   let city = response.data.name;
   let temperature = Math.round(response.data.main.temp);
+  let feelsLike = Math.round(response.data.main.feels_like);
   let windSpeed = Math.round(response.data.wind.speed * 2.237);
   let humidity = response.data.main.humidity;
 
@@ -34,6 +35,9 @@ function showWeather(response) {
 
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(celsuisTemp);
+
+  let feelsLikeElement = document.querySelector("#feels-like");
+  feelsLikeElement.innerHTML = feelsLike;
 
   let windSpeedElement = document.querySelector("#windSpeed");
   windSpeedElement.innerHTML = windSpeed;
