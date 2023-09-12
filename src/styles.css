@@ -109,14 +109,21 @@ div.row.body {
   text-decoration: none;
   color: white;
 }
-.units > a {
+
+.units a {
   color: rgba(244, 254, 255, 0.821);
   text-decoration: none;
 }
 
-.units > a:hover {
-  color: #ffffff;
+.units .active {
+  color: white;
+  cursor: default;
   font-weight: 500;
+}
+
+.units a:hover {
+  text-decoration: none;
+  color: white;
 }
 
 #weather-description {
@@ -124,6 +131,10 @@ div.row.body {
   font-weight: 500;
   color: white;
   margin-left: -50px;
+}
+
+#weather-description:first-letter {
+  text-transform: capitalize;
 }
 
 .weekdays {
