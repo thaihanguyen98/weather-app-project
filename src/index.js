@@ -47,7 +47,7 @@ function formatDate(timestamp) {
 
 function showWeather(response) {
   let city = response.data.name;
-  let temperature = Math.round(response.data.main.temp);
+  let country = response.data.country;
   let feelsLike = Math.round(response.data.main.feels_like);
   let windSpeed = Math.round(response.data.wind.speed * 2.237);
   let humidity = response.data.main.humidity;
@@ -56,6 +56,9 @@ function showWeather(response) {
 
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = city;
+
+  let countryElement = document.querySelector("#country");
+  countryElement = country;
 
   let tempElement = document.querySelector("#temperature");
   tempElement.innerHTML = Math.round(celsuisTemp);
@@ -74,6 +77,13 @@ function showWeather(response) {
 
   let dateElement = document.querySelector("#dateTime");
   dateElement.innerHTML = formatDate(response.data.dt * 1000);
+
+  let iconElement = document.querySelector("#weather-icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 
 function searchCity(event) {

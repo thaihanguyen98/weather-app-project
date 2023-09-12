@@ -23,7 +23,7 @@
       <div class="weather-app">
         <div class="row header">
           <div class="col-6">
-            <h1 id="city">Sydney</h1>
+            <h1 id="city">Sydney, <span id="country">Australia</span></h1>
             <h2 id="dateTime" class="dateTime">
               Monday, 21 August 2023 | 01 : 45 PM
             </h2>
@@ -62,15 +62,16 @@
             <div class="clearfix">
               <img
                 src="icons/cloudy01.svg"
-                alt="Cloudly icon"
+                alt="sunny"
                 class="weather-icon"
+                id="weather-icon"
               />
               <span class="temperature" id="temperature">19</span
               ><span class="units">
                 <a href="#" id="celsius-link" class="active">°C</a> |
                 <a href="#" id="fahrenheit-link">°F</a>
               </span>
-              <span id="weather-description">Party cloudy</span>
+              <span id="weather-description">Clear sky</span>
             </div>
           </div>
           <div class="col-3">
