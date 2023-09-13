@@ -12,6 +12,14 @@ body {
 h3 {
   font-size: 16px;
 }
+
+h4 {
+  font-size: 14px;
+  color: white;
+  font-weight: 500;
+  opacity: 0.8;
+  margin: 0;
+}
 .container {
   margin: 0 auto;
 }
@@ -26,7 +34,7 @@ h3 {
 div.row.header {
   margin-left: 10px;
   margin-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 }
 
 h1#city {
@@ -44,7 +52,12 @@ h2 {
   padding: 0;
   opacity: 0.8;
 }
-
+.forecast-temp {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: white;
+}
 #search-button {
   background-color: #60a8f0;
   color: rgb(255, 255, 255);
@@ -161,12 +174,11 @@ img.icon {
   margin-left: 50px;
 }
 
-.weather-type {
-  font-size: 12px;
-}
-
 .forecast-temp {
   font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: white;
 }
 
 img.weekday-weather {
@@ -174,6 +186,13 @@ img.weekday-weather {
   margin: 0 auto;
   width: 80px;
   padding: 8px;
+}
+
+.weather-type {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(255, 255, 255);
+  opacity: 0.8;
 }
 
 .weather-forecast {
