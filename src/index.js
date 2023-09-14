@@ -84,7 +84,6 @@ function showWeather(response) {
 
 function formatDays(timestamp) {
   let date = new Date(timestamp * 1000);
-  let day = days[date.getDay()];
   let days = [
     "Sunday",
     "Monday",
@@ -94,11 +93,12 @@ function formatDays(timestamp) {
     "Friday",
     "Saturday",
   ];
-  return days[day];
+  let day = days[date.getDay()];
+  return day;
 }
 
 function getDailyForecast(coordinates) {
-  let apiKey = "182df172ea7c823ab5acd8f5e73fa9aa";
+  let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
 }
@@ -111,7 +111,7 @@ function displayForecast(response) {
   let forecastHTML = `<div class="row">`;
 
   forecast.forEach(function (forecastDay, index) {
-    if (index < 5) {
+    if (index < 6) {
       let maxTemp = Math.round(forecastDay.temp.max);
       let minTemp = Math.round(forecastDay.temp.min);
       let tempIcon = forecastDay.weather[0].icon;
@@ -121,13 +121,13 @@ function displayForecast(response) {
         forecastHTML +
         `
             <div class="col-2 weekdays">
-              <h4>${formatDays(forecastDay.dt)}</h4>
+              <h3>${formatDays(forecastDay.dt)}</h3>
               <img src="icons/${tempIcon}.svg" alt="${tempDescription}" class="weekday-weather" />
-              <div class="forecast-temp">
+              <p class="forecast-temp">
                 <span class="forecast-temp-max">${maxTemp}°</span> -
                 <span class="forecast-temp-min">${minTemp}°</span>
-              </div>
-              <div class="weather-type">${tempDescription}</div>
+              </p>
+              <p class="weather-type">${tempDescription}</p>
             </div>
   `;
     }
@@ -140,7 +140,7 @@ function displayForecast(response) {
 function searchCity(event) {
   event.preventDefault();
 
-  let apiKey = "182df172ea7c823ab5acd8f5e73fa9aa";
+  let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
   let units = "metric";
   let searchInput = document.querySelector("#city-input");
   let city = searchInput.value;
@@ -149,7 +149,7 @@ function searchCity(event) {
 }
 
 function retrievePosition(position) {
-  let apiKey = "182df172ea7c823ab5acd8f5e73fa9aa";
+  let apiKey = "2980ff43226d67e53abfcdb6d457dcc8";
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let units = "metric";
@@ -193,5 +193,3 @@ fahrenheitLink.addEventListener("click", displayTempF);
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayTempC);
-
-searchCity("Sydney");

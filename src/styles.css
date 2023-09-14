@@ -11,10 +11,6 @@ body {
 
 h3 {
   font-size: 16px;
-}
-
-h4 {
-  font-size: 14px;
   color: white;
   font-weight: 500;
   opacity: 0.8;
@@ -22,11 +18,12 @@ h4 {
 }
 .container {
   margin: 0 auto;
+  padding-bottom: 20px;
 }
 
 .weather-app {
   background-color: #8dc6ff;
-  padding: 15px;
+  padding: 20px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 976px;
@@ -34,7 +31,7 @@ h4 {
 div.row.header {
   margin-left: 10px;
   margin-top: 20px;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 h1#city {
@@ -179,13 +176,14 @@ img.icon {
   font-weight: 500;
   margin: 0;
   color: white;
+  padding-bottom: 8px;
 }
 
 img.weekday-weather {
   display: block;
   margin: 0 auto;
   width: 80px;
-  padding: 8px;
+  padding: 15px;
 }
 
 .weather-type {
