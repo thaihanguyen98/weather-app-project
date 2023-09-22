@@ -124,7 +124,7 @@ function displayForecast(response) {
               <h3>${formatDays(forecastDay.dt)}</h3>
               <img src="icons/${tempIcon}.svg" alt="${tempDescription}" class="weekday-weather" />
               <p class="forecast-temp">
-                <span class="forecast-temp-max">${maxTemp}°</span> -
+                <span class="forecast-temp-max">${maxTemp}°</span>- 
                 <span class="forecast-temp-min">${minTemp}°</span>
               </p>
               <p class="weather-type">${tempDescription}</p>
